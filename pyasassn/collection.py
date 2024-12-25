@@ -20,10 +20,11 @@ class LightCurveCollection(object):
         self.data = data
         self.catalog_info = catalog_info
 
-        self.data["phot_filter"] = self.data.camera.apply(
-            lambda x: "V" if x in Vcams else "g" if x in gcams else None
-        )
-        self.data = self.data[self.data["phot_filter"].notna()]
+        if not self.data.empty:     # olgavoz
+            self.data["phot_filter"] = self.data.camera.apply(
+                lambda x: "V" if x in Vcams else "g" if x in gcams else None
+            )
+            self.data = self.data[self.data["phot_filter"].notna()]
 
     def __repr__(self):
         f = f"LightCurveCollection with {len(self)} light curves \n"

@@ -14,6 +14,14 @@
   </a>
 </p>
 
+## Changes in olgavoz1971 Fork
+
+This fork contains several improvements and fixes, especially regarding the handling of missing data in the `LightCurveCollection`
+and `SkyPatrolClient` classes.
+
+For a detailed list of changes, please see [CHANGES.md](CHANGES.md).
+
+
 # ASAS-SN SkyPatrol client
 
 The SkyPatrol pyasassn client allows users to query the ASAS-SN input catalog and retrieve light curves from our photometry database. These light curves are regularly updated with continuous photometry run on nightly images. Read the docs [here](https://asas-sn.github.io/skypatrol/index.html).
